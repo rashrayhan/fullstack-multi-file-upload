@@ -1,5 +1,6 @@
 package com.example.fileupload.model;
 
+@Entity
 public class FileInfo {
   private String name;
   private String url;
