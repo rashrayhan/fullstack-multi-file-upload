@@ -14,6 +14,7 @@ public class HomeController {
     
     @PostMapping("/home/message")
     public String postHomePage() {
+        System.out.println("test completed");
         return "message posted";
     }
 }
