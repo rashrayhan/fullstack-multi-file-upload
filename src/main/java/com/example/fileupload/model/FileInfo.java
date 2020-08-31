@@ -5,6 +5,9 @@ public class FileInfo {
   private String name;
   private String url;
 
+  @Transient
+  private String test;
+
   public FileInfo(String name, String url) {
     this.name = name;
     this.url = url;
@@ -24,5 +27,13 @@ public class FileInfo {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public String getTest() {
+    return this.test;
+  }
+
+  public void getTest(String test) {
+    this.test = test;
   }
 }
