@@ -58,6 +58,7 @@ public class FilesController {
       .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
   }
 
+
    @GetMapping("/files/{filename:.+}")
   public ResponseEntity<Resource> getFile2(@PathVariable String filename) {
     Resource file = storageService.load(filename);
@@ -69,4 +70,5 @@ public class FilesController {
   public String getHomePage() {
     return "This is the home page";
   }
+
 }
