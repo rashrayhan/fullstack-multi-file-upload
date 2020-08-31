@@ -37,6 +37,7 @@ public class FilesController {
     }
   }
 
+
   @GetMapping("/files")
   public ResponseEntity<List<FileInfo>> getListFiles() {
     List<FileInfo> fileInfos = storageService.loadAll().map(path -> {
@@ -62,5 +63,10 @@ public class FilesController {
     Resource file = storageService.load(filename);
     return ResponseEntity.ok()
       .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+  }
+
+  @GetMapping("/home")
+  public String getHomePage() {
+    return "This is the home page";
   }
 }
